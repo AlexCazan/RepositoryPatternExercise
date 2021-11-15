@@ -1,0 +1,16 @@
+C:\Users\alexandru.cazan\source\repos\RepositoryExercise\RepositoryExercise\obj\Debug\net5.0\RepositoryExercise.csproj.AssemblyReference.cache
+C:\Users\alexandru.cazan\source\repos\RepositoryExercise\RepositoryExercise\obj\Debug\net5.0\RepositoryExercise.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alexandru.cazan\source\repos\RepositoryExercise\RepositoryExercise\obj\Debug\net5.0\RepositoryExercise.AssemblyInfoInputs.cache
+C:\Users\alexandru.cazan\source\repos\RepositoryExercise\RepositoryExercise\obj\Debug\net5.0\RepositoryExercise.AssemblyInfo.cs
+C:\Users\alexandru.cazan\source\repos\RepositoryExercise\RepositoryExercise\obj\Debug\net5.0\RepositoryExercise.csproj.CoreCompileInputs.cache
+C:\Users\alexandru.cazan\source\repos\RepositoryExercise\RepositoryExercise\bin\Debug\net5.0\RepositoryExercise.exe
+C:\Users\alexandru.cazan\source\repos\RepositoryExercise\RepositoryExercise\bin\Debug\net5.0\RepositoryExercise.deps.json
+C:\Users\alexandru.cazan\source\repos\RepositoryExercise\RepositoryExercise\bin\Debug\net5.0\RepositoryExercise.runtimeconfig.json
+C:\Users\alexandru.cazan\source\repos\RepositoryExercise\RepositoryExercise\bin\Debug\net5.0\RepositoryExercise.runtimeconfig.dev.json
+C:\Users\alexandru.cazan\source\repos\RepositoryExercise\RepositoryExercise\bin\Debug\net5.0\RepositoryExercise.dll
+C:\Users\alexandru.cazan\source\repos\RepositoryExercise\RepositoryExercise\bin\Debug\net5.0\ref\RepositoryExercise.dll
+C:\Users\alexandru.cazan\source\repos\RepositoryExercise\RepositoryExercise\bin\Debug\net5.0\RepositoryExercise.pdb
+C:\Users\alexandru.cazan\source\repos\RepositoryExercise\RepositoryExercise\obj\Debug\net5.0\RepositoryExercise.dll
+C:\Users\alexandru.cazan\source\repos\RepositoryExercise\RepositoryExercise\obj\Debug\net5.0\ref\RepositoryExercise.dll
+C:\Users\alexandru.cazan\source\repos\RepositoryExercise\RepositoryExercise\obj\Debug\net5.0\RepositoryExercise.pdb
+C:\Users\alexandru.cazan\source\repos\RepositoryExercise\RepositoryExercise\obj\Debug\net5.0\RepositoryExercise.genruntimeconfig.cache
