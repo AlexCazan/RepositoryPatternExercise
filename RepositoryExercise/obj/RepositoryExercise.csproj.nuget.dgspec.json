@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alexandru.cazan\\source\\repos\\RepositoryExercise\\RepositoryExercise\\RepositoryExercise.csproj": {}
+    "C:\\Users\\alexandru.cazan\\OneDrive - Expert Network\\Documents\\GitHub\\RepositoryPatternExercise\\RepositoryExercise\\RepositoryExercise.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alexandru.cazan\\source\\repos\\RepositoryExercise\\RepositoryExercise\\RepositoryExercise.csproj": {
+    "C:\\Users\\alexandru.cazan\\OneDrive - Expert Network\\Documents\\GitHub\\RepositoryPatternExercise\\RepositoryExercise\\RepositoryExercise.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexandru.cazan\\source\\repos\\RepositoryExercise\\RepositoryExercise\\RepositoryExercise.csproj",
+        "projectUniqueName": "C:\\Users\\alexandru.cazan\\OneDrive - Expert Network\\Documents\\GitHub\\RepositoryPatternExercise\\RepositoryExercise\\RepositoryExercise.csproj",
         "projectName": "RepositoryExercise",
-        "projectPath": "C:\\Users\\alexandru.cazan\\source\\repos\\RepositoryExercise\\RepositoryExercise\\RepositoryExercise.csproj",
+        "projectPath": "C:\\Users\\alexandru.cazan\\OneDrive - Expert Network\\Documents\\GitHub\\RepositoryPatternExercise\\RepositoryExercise\\RepositoryExercise.csproj",
         "packagesPath": "C:\\Users\\alexandru.cazan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexandru.cazan\\source\\repos\\RepositoryExercise\\RepositoryExercise\\obj\\",
+        "outputPath": "C:\\Users\\alexandru.cazan\\OneDrive - Expert Network\\Documents\\GitHub\\RepositoryPatternExercise\\RepositoryExercise\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alexandru.cazan\\AppData\\Roaming\\NuGet\\NuGet.Config",

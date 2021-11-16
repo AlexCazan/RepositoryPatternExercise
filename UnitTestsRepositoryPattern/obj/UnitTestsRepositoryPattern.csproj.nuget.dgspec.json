@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alexandru.cazan\\source\\repos\\RepositoryExercise\\UnitTestsRepositoryPattern\\UnitTestsRepositoryPattern.csproj": {}
+    "C:\\Users\\alexandru.cazan\\OneDrive - Expert Network\\Documents\\GitHub\\RepositoryPatternExercise\\UnitTestsRepositoryPattern\\UnitTestsRepositoryPattern.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alexandru.cazan\\source\\repos\\RepositoryExercise\\RepositoryExercise\\RepositoryExercise.csproj": {
+    "C:\\Users\\alexandru.cazan\\OneDrive - Expert Network\\Documents\\GitHub\\RepositoryPatternExercise\\RepositoryExercise\\RepositoryExercise.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexandru.cazan\\source\\repos\\RepositoryExercise\\RepositoryExercise\\RepositoryExercise.csproj",
+        "projectUniqueName": "C:\\Users\\alexandru.cazan\\OneDrive - Expert Network\\Documents\\GitHub\\RepositoryPatternExercise\\RepositoryExercise\\RepositoryExercise.csproj",
         "projectName": "RepositoryExercise",
-        "projectPath": "C:\\Users\\alexandru.cazan\\source\\repos\\RepositoryExercise\\RepositoryExercise\\RepositoryExercise.csproj",
+        "projectPath": "C:\\Users\\alexandru.cazan\\OneDrive - Expert Network\\Documents\\GitHub\\RepositoryPatternExercise\\RepositoryExercise\\RepositoryExercise.csproj",
         "packagesPath": "C:\\Users\\alexandru.cazan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexandru.cazan\\source\\repos\\RepositoryExercise\\RepositoryExercise\\obj\\",
+        "outputPath": "C:\\Users\\alexandru.cazan\\OneDrive - Expert Network\\Documents\\GitHub\\RepositoryPatternExercise\\RepositoryExercise\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alexandru.cazan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -58,14 +58,14 @@
         }
       }
     },
-    "C:\\Users\\alexandru.cazan\\source\\repos\\RepositoryExercise\\UnitTestsRepositoryPattern\\UnitTestsRepositoryPattern.csproj": {
+    "C:\\Users\\alexandru.cazan\\OneDrive - Expert Network\\Documents\\GitHub\\RepositoryPatternExercise\\UnitTestsRepositoryPattern\\UnitTestsRepositoryPattern.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexandru.cazan\\source\\repos\\RepositoryExercise\\UnitTestsRepositoryPattern\\UnitTestsRepositoryPattern.csproj",
+        "projectUniqueName": "C:\\Users\\alexandru.cazan\\OneDrive - Expert Network\\Documents\\GitHub\\RepositoryPatternExercise\\UnitTestsRepositoryPattern\\UnitTestsRepositoryPattern.csproj",
         "projectName": "UnitTestsRepositoryPattern",
-        "projectPath": "C:\\Users\\alexandru.cazan\\source\\repos\\RepositoryExercise\\UnitTestsRepositoryPattern\\UnitTestsRepositoryPattern.csproj",
+        "projectPath": "C:\\Users\\alexandru.cazan\\OneDrive - Expert Network\\Documents\\GitHub\\RepositoryPatternExercise\\UnitTestsRepositoryPattern\\UnitTestsRepositoryPattern.csproj",
         "packagesPath": "C:\\Users\\alexandru.cazan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexandru.cazan\\source\\repos\\RepositoryExercise\\UnitTestsRepositoryPattern\\obj\\",
+        "outputPath": "C:\\Users\\alexandru.cazan\\OneDrive - Expert Network\\Documents\\GitHub\\RepositoryPatternExercise\\UnitTestsRepositoryPattern\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alexandru.cazan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,8 +82,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\alexandru.cazan\\source\\repos\\RepositoryExercise\\RepositoryExercise\\RepositoryExercise.csproj": {
-                "projectPath": "C:\\Users\\alexandru.cazan\\source\\repos\\RepositoryExercise\\RepositoryExercise\\RepositoryExercise.csproj"
+              "C:\\Users\\alexandru.cazan\\OneDrive - Expert Network\\Documents\\GitHub\\RepositoryPatternExercise\\RepositoryExercise\\RepositoryExercise.csproj": {
+                "projectPath": "C:\\Users\\alexandru.cazan\\OneDrive - Expert Network\\Documents\\GitHub\\RepositoryPatternExercise\\RepositoryExercise\\RepositoryExercise.csproj"
               }
             }
           }

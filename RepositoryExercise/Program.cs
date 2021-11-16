@@ -7,6 +7,7 @@ namespace RepositoryExercise
         static void Main(string[] args)
         {
             string path = "..\\..\\..\\Album.csv";
+
             try
             {
                 var albumRepository = new AlbumRepository(path);
@@ -16,9 +17,6 @@ namespace RepositoryExercise
             {
                 Console.WriteLine(exp.Message);
             }
-            
-
-
         }
     }
 }

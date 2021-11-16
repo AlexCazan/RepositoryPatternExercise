@@ -11,10 +11,12 @@ namespace RepositoryExercise
             bool finish = false;
             var command = new Command(albumRepository);
             var pathSave = "..\\..\\..\\AlbumsSave.csv";
+
             while (finish!=true)
             {
                 Console.Write("\r\nSelect an option: ");
                 string s = Console.ReadLine();
+
                 switch (s)
                 {
                     case "1":
@@ -64,11 +66,13 @@ namespace RepositoryExercise
                         break;
                     default:
                         Console.WriteLine("The option is invalid.");
+                        Options();
                         break;
 
                 }
             }
         }
+
         public static void Options()
         {
             Console.WriteLine("\r\nChoose an option:");
