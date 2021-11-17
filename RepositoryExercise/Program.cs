@@ -6,17 +6,15 @@ namespace RepositoryExercise
     {
         static void Main(string[] args)
         {
-            string path = "..\\..\\..\\Album.csv";
-
             try
             {
-                var albumRepository = new AlbumRepository(path);
-                Menu.MenuBody(albumRepository);
+                Menu.MenuBody();
             }
-            catch(Exception exp)
+            catch (Exception exp)
             {
                 Console.WriteLine(exp.Message);
             }
         }
+
     }
 }

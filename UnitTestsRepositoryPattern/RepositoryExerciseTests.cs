@@ -8,7 +8,7 @@ namespace UnitTestsRepositoryPattern
     public class RepositoryExerciseTests
     {
         private readonly string path = "..\\..\\..\\AlbumTest.csv";
-        private readonly AlbumRepository albumRepository;
+        private readonly AlbumRepositoryCSV albumRepository;
         private const string deleteMessage= "Album deleted successfully";
         private const string updateMessage= "Album updated";
 
@@ -21,8 +21,10 @@ namespace UnitTestsRepositoryPattern
         [InlineData(4)]
         public void GetAlbumById_ReturnAlbumWithSameId(int targetId)
         {
+            //Act
             var album = albumRepository.GetAlbumById(targetId);
 
+            //Assert
             Assert.Equal(album.Id, targetId);
         }
 
@@ -31,8 +33,10 @@ namespace UnitTestsRepositoryPattern
         [InlineData(20)]
         public void GetAlbumById_ReturnAlbumNull(int tagertId)
         {
+            //Act
             var album = albumRepository.GetAlbumById(tagertId);
 
+            //Assert
             Assert.Null(album);
         }
 
@@ -41,8 +45,10 @@ namespace UnitTestsRepositoryPattern
         [InlineData("Bob Dylan")]
         public void GetAlbumByArtist_ReturnAlbumWithSameArtist(string targetArtist)
         {
+            //Act
             var albums = albumRepository.GetAlbumByArtist(targetArtist);
 
+            //Assert
             Assert.Equal(albums.ElementAt(0).Artist, targetArtist);
         }
 
@@ -51,8 +57,10 @@ namespace UnitTestsRepositoryPattern
         [InlineData("veselie")]
         public void GetAlbumByArtist_ReturnEmptyListAlbumsWithArtistNotFound(string targetArtist)
         {
+            //Act
             var albums = albumRepository.GetAlbumByArtist(targetArtist);
 
+            //Assert
             Assert.Empty(albums);
         }
 
@@ -62,8 +70,10 @@ namespace UnitTestsRepositoryPattern
         [InlineData("Purple Rain")]
         public void GetAlbumByTitle_ReturnAlbumWithSameTitle(string targetTitle)
         {
+            //Act
             var albums = albumRepository.GetAlbumByTitle(targetTitle);
 
+            //Assert
             Assert.Equal(albums.ElementAt(0).Title, targetTitle);
         }
 
@@ -72,8 +82,10 @@ namespace UnitTestsRepositoryPattern
         [InlineData("czxvxz")]
         public void GetAlbumByTitle_ReturnNullListAlbumWithSpecifiedTitleNotFound(string targetTitle)
         {
+            //Act
             var albums = albumRepository.GetAlbumByTitle(targetTitle);
 
+            //Assert
             Assert.Empty(albums);
         }
 
@@ -83,10 +95,13 @@ namespace UnitTestsRepositoryPattern
         [ClassData(typeof(RepositoryTestData))]
         public void InsertAlbum_GetByIdReturnsInsertedAlbum(Album albumToInsert)
         {
+            //Arrange
             albumRepository.InsertAlbum(albumToInsert);
 
+            //Act
             var album = albumRepository.GetAlbumById(albumToInsert.Id);
 
+            //Assert
             Assert.Equal(album.Id, albumToInsert.Id);
         }
 
@@ -96,9 +111,10 @@ namespace UnitTestsRepositoryPattern
         [InlineData(3)]
         public void DeleteAlbum_ReturnsCorrectMessage(int tagertId)
         {
-            string message=albumRepository.DeleteAlbum(tagertId);
+            //Act
+            string message =albumRepository.DeleteAlbum(tagertId);
 
-
+            //Assert
             Assert.Equal(deleteMessage,message);
         }
 
@@ -107,8 +123,10 @@ namespace UnitTestsRepositoryPattern
         [InlineData(20)]
         public void DeleteAlbum_AlbumWithThatIdNotInTheCurrentContext(int tagertId)
         {
+            //Act
             string message = albumRepository.DeleteAlbum(tagertId);
 
+            //Assert
             Assert.NotEqual(deleteMessage, message);
         }
 
@@ -117,9 +135,10 @@ namespace UnitTestsRepositoryPattern
         [InlineData(3,"Artist","Dorel")]
         public void UpdateAlbum_ReturnsCorrectMessage(int tagertId,string property,string value)
         {
+            //Act
             string message = albumRepository.UpdateAlbum(tagertId,property,value);
 
-
+            //Assert
             Assert.Equal(updateMessage, message);
         }
 
@@ -128,20 +147,23 @@ namespace UnitTestsRepositoryPattern
         [InlineData(20, "Artist", "Dorel")]
         public void UpdateAlbum_AlbumWithThatIdNotInTheCurrentContext(int tagertId, string property, string value)
         {
+            //Act
             string message = albumRepository.UpdateAlbum(tagertId, property, value);
 
-
+            //Assert
             Assert.NotEqual(updateMessage, message);
         }
 
         [Fact]
         public void SaveAlbum_FileSavedProperly()
         {
-
+            //Arrange
             var pathSave = "..\\..\\..\\AlbumsSave.csv";
 
+            //Act
             albumRepository.Save(pathSave);
 
+            //Assert
             Assert.True(File.Exists(pathSave));
         }
 

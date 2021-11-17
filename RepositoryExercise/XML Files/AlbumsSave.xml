@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Albums xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Album>
+    <Id>1</Id>
+    <Artist>Chris Crone</Artist>
+    <Title>Turn me on</Title>
+    <Year>2021</Year>
+    <Genre>Pop</Genre>
+    <Sales>20000</Sales>
+    <Owned>true</Owned>
+    <RecordLabel>ana are mere</RecordLabel>
+  </Album>
+  <Album>
+    <Id>3</Id>
+    <Artist>Bob Dylan</Artist>
+    <Title>Blood on the Tracks</Title>
+    <Year>1975</Year>
+    <Genre>Rock</Genre>
+    <Sales>300000</Sales>
+    <Owned>true</Owned>
+    <RecordLabel>gogosi</RecordLabel>
+  </Album>
+  <Album>
+    <Id>4</Id>
+    <Artist>Prince and the Revolution</Artist>
+    <Title>dsacad</Title>
+    <Year>1984</Year>
+    <Genre>Rap</Genre>
+    <Sales>10000</Sales>
+    <Owned>false</Owned>
+    <RecordLabel>sarmale</RecordLabel>
+  </Album>
+  <Album>
+    <Id>5</Id>
+    <Artist>The Beatles</Artist>
+    <Title>Abbey Road</Title>
+    <Year>1969</Year>
+    <Genre>Rock</Genre>
+    <Sales>234000</Sales>
+    <Owned>false</Owned>
+    <RecordLabel>ciuperci</RecordLabel>
+  </Album>
+</Albums>
