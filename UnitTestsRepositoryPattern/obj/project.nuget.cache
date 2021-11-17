@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iLv4P+Kw36Z6Q1O1QeWaWN/GBhgh3LSN3zPsWIx89r3P0cIhgpyh0C9g0QxQytnYVMmJa/nwJ0MumBQBc3kdpg==",
+  "dgSpecHash": "wg2+xrUVDhNYLLSwH89N4JqmxZyognJ5YE2qvPs3UdZPlptYDxN5+6UXOZwsv4d1SVMnfox/s6iL+g3ifPkiLg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\alexandru.cazan\\source\\repos\\RepositoryPatternExercise\\UnitTestsRepositoryPattern\\UnitTestsRepositoryPattern.csproj",
+  "projectFilePath": "C:\\Users\\alexandru.cazan\\OneDrive - Expert Network\\Documents\\GitHub\\RepositoryPatternExercise\\UnitTestsRepositoryPattern\\UnitTestsRepositoryPattern.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alexandru.cazan\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
     "C:\\Users\\alexandru.cazan\\.nuget\\packages\\microsoft.codecoverage\\17.0.0\\microsoft.codecoverage.17.0.0.nupkg.sha512",
