@@ -11,7 +11,7 @@ namespace RepositoryExercise
         void InsertAlbum(Album album);
         string DeleteAlbum(int albumId);
         string UpdateAlbum(int id,string property,string value);
-        void Save(string path);
+        void Save(string path,string fileName);
 
     }
 }

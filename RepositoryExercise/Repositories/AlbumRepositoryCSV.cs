@@ -1,5 +1,7 @@
 ﻿using RepositoryExercise.Repositories;
+using System;
 using System.IO;
+using System.Text;
 
 namespace RepositoryExercise
 {
@@ -20,9 +22,12 @@ namespace RepositoryExercise
                 }
         }
 
-        public override void Save(string path)
+        public override void Save(string path,string fileName)
         {
-            using (var writer = new StreamWriter(path))
+            string fileNameSave = String.Format("{0}__{1}", fileName + "_UpdatedAt", DateTime.Now.ToString("yyyyMMddhhmmss"));
+            var sb = new StringBuilder(path);
+            sb.Append(fileNameSave).Append(".csv");
+            using (var writer = new StreamWriter(sb.ToString()))
             {
                 writer.WriteLine("Id,Artist,Title,Year,Genre,Sales,Owned,Record Label");
                 foreach (var album in albums)

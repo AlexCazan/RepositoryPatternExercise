@@ -26,7 +26,14 @@ namespace RepositoryExercise.Repositories
         }
         public void InsertAlbum(Album album)
         {
-            album.Id = albums.Last().Id + 1;
+            if(albums.Count == 0)
+            {
+                album.Id =1;
+            }
+            else
+            {
+                album.Id = albums.Last().Id + 1;
+            }
             albums.Add(album);
         }
 
@@ -83,7 +90,7 @@ namespace RepositoryExercise.Repositories
             return "Album updated";
         }
 
-        public abstract void Save(string path);
+        public abstract void Save(string path,string fileName);
     }
 
 }

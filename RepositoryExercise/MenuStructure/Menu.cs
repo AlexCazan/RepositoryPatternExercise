@@ -1,5 +1,11 @@
 ﻿using RepositoryExercise.Repositories;
 using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text;
+using System.Xml;
+using System.Xml.Linq;
+using System.Xml.Serialization;
 
 namespace RepositoryExercise
 {
@@ -7,8 +13,10 @@ namespace RepositoryExercise
     {
         public static void MenuBody()
         {
-            var pathCSV = "..\\..\\..\\CSV Files\\Album.csv";
-            var pathXML = "..\\..\\..\\XML Files\\Album.xml";
+            var pathForCSVFiles = "..\\..\\..\\CSV FilesForUse\\";
+            var pathForXMLFiles = "..\\..\\..\\XML FilesForUse\\";
+            var pathSaveCSV = "..\\..\\..\\CSV FileSave\\";
+            var pathSaveXML = "..\\..\\..\\XML FileSave\\";
             bool finishForFirstMenu = false;
 
             while (finishForFirstMenu != true)
@@ -19,16 +27,16 @@ namespace RepositoryExercise
                 switch (input)
                 {
                     case "1":
-                        var pathSaveCSV = "..\\..\\..\\CSV Files\\AlbumsSave.csv";
-                        var albumRepositoryCSV = new AlbumRepositoryCSV(pathCSV);
+                        var fileInformation = ChoosingFile("*.csv",pathForCSVFiles);
+                        var albumRepositoryCSV = new AlbumRepositoryCSV(fileInformation.Item1);
                         var command = new Command(albumRepositoryCSV);
-                        FileOperations(command, albumRepositoryCSV, pathSaveCSV);
+                        FileOperations(command, albumRepositoryCSV, pathSaveCSV,fileInformation.Item2);
                         break;
                     case "2":
-                        var pathSaveXML = "..\\..\\..\\XML Files\\AlbumsSave.xml";
-                        var albumRepositoryXML = new AlbumRepositoryXML(pathXML);
+                        fileInformation = ChoosingFile("*.xml", pathForXMLFiles);
+                        var albumRepositoryXML = new AlbumRepositoryXML(fileInformation.Item1);
                         command = new Command(albumRepositoryXML);
-                        FileOperations(command, albumRepositoryXML, pathSaveXML);
+                        FileOperations(command, albumRepositoryXML, pathSaveXML, fileInformation.Item2);
                         break;
                     case "3":
                         Console.WriteLine("Exiting...");
@@ -41,6 +49,28 @@ namespace RepositoryExercise
             }
         }
 
+        public static Tuple<string,string> ChoosingFile(string extension,string pathFolder)
+        {
+            DisplayFiles(extension);
+            extension = extension.Remove(0, 1);
+            Console.WriteLine("Type the name of the file you want to make some changes.");
+            var fileName = Console.ReadLine();
+            var sb = new StringBuilder(fileName);
+            if(!fileName.EndsWith(extension))
+            {
+                sb.Append(extension);
+            }
+            var filePath = sb.Insert(0, pathFolder).ToString();
+            if(extension==".csv")
+            {
+                CheckIfFileExistsCSV(filePath);
+            }
+            else
+            {
+                CheckIfFileExistsXML(filePath);
+            }
+            return Tuple.Create(filePath,fileName);
+        }
         public static void Options()
         {
             Console.WriteLine("\r\nChoose an option:");
@@ -55,17 +85,43 @@ namespace RepositoryExercise
             Console.WriteLine("9) Back to the first menu");
             Console.WriteLine("10) Exit the application");
         }
+        public static void DisplayFiles(string extension)
+        {
+            Console.WriteLine("These are the files available for change.");
+            var files = Directory.GetFiles($"..\\..\\..\\{extension.Remove(0,2).ToUpper()} FilesForUse", extension);
+            foreach (var item in files)
+            {
+                Console.WriteLine(Path.GetFileName(item));
+            }
+        }
 
+        public static void CheckIfFileExistsCSV(string filePath)
+        {
+            if (!File.Exists(filePath))
+            {
+                using (StreamWriter streamWriter = new(filePath))
+                {
+                    streamWriter.WriteLine("Id,Artist,Title,Year,Genre,Sales,Owned,Record Label");
+                }
+            }
+        }
+        public static void CheckIfFileExistsXML(string filePath)
+        {
+            if (!File.Exists(filePath))
+            {
+                new XDocument(new XElement("Albums")).Save(filePath);
+            }
+        }
         public static void OptionsFiles()
         {
-            Console.WriteLine("Welcome to the studio!");
-            Console.WriteLine("Which file do you want to make some changes?");
-            Console.WriteLine("1) CSV file");
-            Console.WriteLine("2) XML file");
+            Console.WriteLine("Welcome.");
+            Console.WriteLine("Select the extension for the files you want to work with.");
+            Console.WriteLine("1) csv");
+            Console.WriteLine("2) xml");
             Console.WriteLine("3) Exit.");
         }
 
-        public static void FileOperations(Command command, IAlbumRepository albumRepository,string pathSave)
+        public static void FileOperations(Command command, IAlbumRepository albumRepository,string pathSave,string fileName)
         {
             bool finishForSecondMenu = false;
             while (finishForSecondMenu != true)
@@ -108,7 +164,7 @@ namespace RepositoryExercise
                         command.UpdateAlbum();
                         break;
                     case "8":
-                        albumRepository.Save(pathSave);
+                        albumRepository.Save(pathSave,fileName);
                         Console.WriteLine("Changes saved successfully");
                         break;
                     case "9":
