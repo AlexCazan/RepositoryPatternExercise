@@ -3,7 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 
-namespace RepositoryExercise.Utils
+namespace RepositoryExercise
 {
     public static class Validation
     {

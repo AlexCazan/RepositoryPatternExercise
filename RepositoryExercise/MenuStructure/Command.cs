@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Linq;
 using System.Text;
-using static RepositoryExercise.Utils.Validation;
+using static RepositoryExercise.Validation;
+
 namespace RepositoryExercise
 {
     public class Command
     {
-        private IAlbumRepository AlbumRepository { get; set; }
+        private IAlbumRepository _albumRepository { get; set; }
         public Command(IAlbumRepository albumRepository)
         {
-            AlbumRepository = albumRepository;
+            _albumRepository = albumRepository;
         }
         public void GetAllAlbums()
         {
-            var albums = AlbumRepository.GetAlbums();
+            var albums = _albumRepository.GetAlbums();
             if(!albums.Any())
             {
                 Console.WriteLine("There are no albums in the file.");
@@ -28,7 +29,7 @@ namespace RepositoryExercise
         }
         public void GetAlbumById(int id)
         {
-            var album = AlbumRepository.GetAlbumById(id);
+            var album = _albumRepository.GetAlbumById(id);
             if (album == null)
             {
                 Console.WriteLine("Album with that id doesn't exist.");
@@ -40,7 +41,7 @@ namespace RepositoryExercise
         }
         public void GetAlbumByArtist(string artist)
         {
-            var albumsByArtist = AlbumRepository.GetAlbumByArtist(artist);
+            var albumsByArtist = _albumRepository.GetAlbumByArtist(artist);
             if (!albumsByArtist.Any())
             {
                 Console.WriteLine("Album with that artist doesn't exist in the current context");
@@ -52,7 +53,7 @@ namespace RepositoryExercise
         }
         public void GetAlbumByTitle(string title)
         {
-            var albumsByTitle = AlbumRepository.GetAlbumByTitle(title);
+            var albumsByTitle = _albumRepository.GetAlbumByTitle(title);
             if (!albumsByTitle.Any())
             {
                 Console.WriteLine("Album with that title doesn't exist in the current context");
@@ -88,16 +89,16 @@ namespace RepositoryExercise
             string newRecordLabel = Console.ReadLine();
             sb.Append(newRecordLabel).Append(',');
 
-            AlbumRepository.InsertAlbum(Album.Parse(sb.ToString()));
+            _albumRepository.InsertAlbum(Album.Parse(sb.ToString()));
         }
         public void UpdateAlbum()
         {
             var id = ValidateStringOnlyDigits("\r\nPlease type the id of the album you want to update.");
-            Console.WriteLine("\r\nType one property from these: artist,title,year,genre,sales,owned and recordLabel");
+            Console.WriteLine("\r\nType one property from these: Artist,Title,Year,Genre,Sales,Owned and RecordLabel");
             var property = Console.ReadLine();
             Console.WriteLine("\r\nType the new value for the selected property");
             var value = Console.ReadLine();
-            Console.WriteLine(AlbumRepository.UpdateAlbum(id,property,value));
+            Console.WriteLine(_albumRepository.UpdateAlbum(id,property,value));
         }
     }
 }

@@ -83,14 +83,18 @@ namespace RepositoryExercise.Repositories
             {
                 albumToUpdate.Owned= bool.Parse(value);
             }
-            else
+            else if(property=="RecordLabel")
             {
                 albumToUpdate.RecordLabel= value;
+            }
+            else
+            {
+                return "Property is incorrect. The property must be exactly one of those mentioned.";
             }
             return "Album updated";
         }
 
-        public abstract void Save(string path,string fileName);
+        public abstract string Save(string path,string fileName);
     }
 
 }

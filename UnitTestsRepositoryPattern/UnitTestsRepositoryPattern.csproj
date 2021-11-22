@@ -23,4 +23,9 @@
     <ProjectReference Include="..\RepositoryExercise\RepositoryExercise.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="CSV TestFilesSave\" />
+    <Folder Include="XML TestFilesSave\" />
+  </ItemGroup>
+
 </Project>

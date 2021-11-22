@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace RepositoryExercise
 {
-    public class RepositoryTestData : IEnumerable<object[]>
+    public class AlbumRepositoryTestDataInsert : IEnumerable<object[]>
     {
         public IEnumerator<object[]> GetEnumerator()
         {

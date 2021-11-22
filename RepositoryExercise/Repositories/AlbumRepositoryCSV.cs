@@ -22,9 +22,9 @@ namespace RepositoryExercise
                 }
         }
 
-        public override void Save(string path,string fileName)
+        public override string Save(string path,string fileName)
         {
-            string fileNameSave = String.Format("{0}__{1}", fileName + "_UpdatedAt", DateTime.Now.ToString("yyyyMMddhhmmss"));
+            var fileNameSave = String.Format("{0}__{1}", fileName + "_UpdatedAt", DateTime.Now.ToString("yyyyMMddhhmmss"));
             var sb = new StringBuilder(path);
             sb.Append(fileNameSave).Append(".csv");
             using (var writer = new StreamWriter(sb.ToString()))
@@ -35,6 +35,7 @@ namespace RepositoryExercise
                     writer.WriteLine(album.ToString());
                 }
             }
+            return fileNameSave;
         }
     }
 }

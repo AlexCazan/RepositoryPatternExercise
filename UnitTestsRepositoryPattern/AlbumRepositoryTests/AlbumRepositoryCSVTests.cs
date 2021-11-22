@@ -1,20 +1,22 @@
 using RepositoryExercise;
+using RepositoryExercise.Repositories;
 using System.IO;
 using System.Linq;
 using Xunit;
 
 namespace UnitTestsRepositoryPattern
 {
-    public class RepositoryExerciseTests
+    public class AlbumRepositoryCSVTests
     {
-        private readonly string path = "..\\..\\..\\AlbumTest.csv";
+        private readonly string path = "..\\..\\..\\CSV TestFiles\\AlbumTest.csv";
         private readonly AlbumRepositoryCSV albumRepository;
         private const string deleteMessage= "Album deleted successfully";
         private const string updateMessage= "Album updated";
 
-        public RepositoryExerciseTests()
+        public AlbumRepositoryCSVTests()
         {
             albumRepository = new(path);
+
         }
         [Theory]
         [InlineData(3)]
@@ -92,7 +94,7 @@ namespace UnitTestsRepositoryPattern
 
 
         [Theory]
-        [ClassData(typeof(RepositoryTestData))]
+        [ClassData(typeof(AlbumRepositoryTestDataInsert))]
         public void InsertAlbum_GetByIdReturnsInsertedAlbum(Album albumToInsert)
         {
             //Arrange
@@ -154,18 +156,16 @@ namespace UnitTestsRepositoryPattern
             Assert.NotEqual(updateMessage, message);
         }
 
-        [Fact]
-        public void SaveAlbum_FileSavedProperly()
-        {
-            //Arrange
-            var pathSave = "..\\..\\..\\AlbumsSave.csv";
 
+        [Theory]
+        [InlineData("..\\..\\..\\CSV TestFilesSave\\","AlbumTest")]
+        public void SaveAlbum_FileSavedProperly(string pathSave,string fileName)
+        {
             //Act
-            albumRepository.Save(pathSave);
+            var newFileName=albumRepository.Save(pathSave,fileName);
 
             //Assert
-            Assert.True(File.Exists(pathSave));
+            Assert.True(File.Exists(pathSave+newFileName+".csv"));
         }
-
     }
 }
