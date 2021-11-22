@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alexandru.cazan\\OneDrive - Expert Network\\Documents\\GitHub\\RepositoryPatternExercise\\UnitTestsRepositoryPattern\\UnitTestsRepositoryPattern.csproj": {}
+    "C:\\Users\\alexg\\Documents\\GitHub\\RepositoryPatternExercise\\UnitTestsRepositoryPattern\\UnitTestsRepositoryPattern.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alexandru.cazan\\OneDrive - Expert Network\\Documents\\GitHub\\RepositoryPatternExercise\\RepositoryExercise\\RepositoryExercise.csproj": {
+    "C:\\Users\\alexg\\Documents\\GitHub\\RepositoryPatternExercise\\RepositoryExercise\\RepositoryExercise.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexandru.cazan\\OneDrive - Expert Network\\Documents\\GitHub\\RepositoryPatternExercise\\RepositoryExercise\\RepositoryExercise.csproj",
+        "projectUniqueName": "C:\\Users\\alexg\\Documents\\GitHub\\RepositoryPatternExercise\\RepositoryExercise\\RepositoryExercise.csproj",
         "projectName": "RepositoryExercise",
-        "projectPath": "C:\\Users\\alexandru.cazan\\OneDrive - Expert Network\\Documents\\GitHub\\RepositoryPatternExercise\\RepositoryExercise\\RepositoryExercise.csproj",
-        "packagesPath": "C:\\Users\\alexandru.cazan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexandru.cazan\\OneDrive - Expert Network\\Documents\\GitHub\\RepositoryPatternExercise\\RepositoryExercise\\obj\\",
+        "projectPath": "C:\\Users\\alexg\\Documents\\GitHub\\RepositoryPatternExercise\\RepositoryExercise\\RepositoryExercise.csproj",
+        "packagesPath": "C:\\Users\\alexg\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexg\\Documents\\GitHub\\RepositoryPatternExercise\\RepositoryExercise\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\alexandru.cazan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alexg\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -49,26 +52,35 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.4, 5.0.4]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.3.21202.5\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\alexandru.cazan\\OneDrive - Expert Network\\Documents\\GitHub\\RepositoryPatternExercise\\UnitTestsRepositoryPattern\\UnitTestsRepositoryPattern.csproj": {
+    "C:\\Users\\alexg\\Documents\\GitHub\\RepositoryPatternExercise\\UnitTestsRepositoryPattern\\UnitTestsRepositoryPattern.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexandru.cazan\\OneDrive - Expert Network\\Documents\\GitHub\\RepositoryPatternExercise\\UnitTestsRepositoryPattern\\UnitTestsRepositoryPattern.csproj",
+        "projectUniqueName": "C:\\Users\\alexg\\Documents\\GitHub\\RepositoryPatternExercise\\UnitTestsRepositoryPattern\\UnitTestsRepositoryPattern.csproj",
         "projectName": "UnitTestsRepositoryPattern",
-        "projectPath": "C:\\Users\\alexandru.cazan\\OneDrive - Expert Network\\Documents\\GitHub\\RepositoryPatternExercise\\UnitTestsRepositoryPattern\\UnitTestsRepositoryPattern.csproj",
-        "packagesPath": "C:\\Users\\alexandru.cazan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexandru.cazan\\OneDrive - Expert Network\\Documents\\GitHub\\RepositoryPatternExercise\\UnitTestsRepositoryPattern\\obj\\",
+        "projectPath": "C:\\Users\\alexg\\Documents\\GitHub\\RepositoryPatternExercise\\UnitTestsRepositoryPattern\\UnitTestsRepositoryPattern.csproj",
+        "packagesPath": "C:\\Users\\alexg\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexg\\Documents\\GitHub\\RepositoryPatternExercise\\UnitTestsRepositoryPattern\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\alexandru.cazan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alexg\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,8 +94,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\alexandru.cazan\\OneDrive - Expert Network\\Documents\\GitHub\\RepositoryPatternExercise\\RepositoryExercise\\RepositoryExercise.csproj": {
-                "projectPath": "C:\\Users\\alexandru.cazan\\OneDrive - Expert Network\\Documents\\GitHub\\RepositoryPatternExercise\\RepositoryExercise\\RepositoryExercise.csproj"
+              "C:\\Users\\alexg\\Documents\\GitHub\\RepositoryPatternExercise\\RepositoryExercise\\RepositoryExercise.csproj": {
+                "projectPath": "C:\\Users\\alexg\\Documents\\GitHub\\RepositoryPatternExercise\\RepositoryExercise\\RepositoryExercise.csproj"
               }
             }
           }
@@ -134,7 +146,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.3.21202.5\\RuntimeIdentifierGraph.json"
         }
       }
     }

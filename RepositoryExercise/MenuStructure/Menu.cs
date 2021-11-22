@@ -1,12 +1,8 @@
 ﻿using RepositoryExercise.Repositories;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using System.Xml;
-using System.Xml.Linq;
-using System.Xml.Serialization;
-
+using static RepositoryExercise.Utils.Validation;
 namespace RepositoryExercise
 {
     public class Menu
@@ -95,23 +91,7 @@ namespace RepositoryExercise
             }
         }
 
-        public static void CheckIfFileExistsCSV(string filePath)
-        {
-            if (!File.Exists(filePath))
-            {
-                using (StreamWriter streamWriter = new(filePath))
-                {
-                    streamWriter.WriteLine("Id,Artist,Title,Year,Genre,Sales,Owned,Record Label");
-                }
-            }
-        }
-        public static void CheckIfFileExistsXML(string filePath)
-        {
-            if (!File.Exists(filePath))
-            {
-                new XDocument(new XElement("Albums")).Save(filePath);
-            }
-        }
+        
         public static void OptionsFiles()
         {
             Console.WriteLine("Welcome.");
@@ -120,7 +100,7 @@ namespace RepositoryExercise
             Console.WriteLine("2) xml");
             Console.WriteLine("3) Exit.");
         }
-
+        
         public static void FileOperations(Command command, IAlbumRepository albumRepository,string pathSave,string fileName)
         {
             bool finishForSecondMenu = false;
@@ -135,8 +115,7 @@ namespace RepositoryExercise
                         command.GetAllAlbums();
                         break;
                     case "2":
-                        Console.WriteLine("Write the id: ");
-                        int id = Int32.Parse(Console.ReadLine());
+                        int id = ValidateStringOnlyDigits("Write the id: ");
                         command.GetAlbumById(id);
                         break;
                     case "3":
@@ -155,8 +134,7 @@ namespace RepositoryExercise
                         break;
                     case "6":
                         command.GetAllAlbums();
-                        Console.WriteLine("Type the id of the album you want to delete from the above: ");
-                        int idAlbumToDelete = Int32.Parse(Console.ReadLine());
+                        int idAlbumToDelete = ValidateStringOnlyDigits("Type the id of the album you want to delete from the above: ");
                         Console.WriteLine(albumRepository.DeleteAlbum(idAlbumToDelete));
                         break;
                     case "7":

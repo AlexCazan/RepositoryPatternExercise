@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Text;
-
+using static RepositoryExercise.Utils.Validation;
 namespace RepositoryExercise
 {
     public class Command
@@ -14,7 +14,16 @@ namespace RepositoryExercise
         public void GetAllAlbums()
         {
             var albums = AlbumRepository.GetAlbums();
-            Album.Output(albums);
+            if(!albums.Any())
+            {
+                Console.WriteLine("There are no albums in the file.");
+            }
+            else
+            {
+                Console.WriteLine("These are the albums: \r\n");
+                Album.Output(albums);
+            }
+            
 
         }
         public void GetAlbumById(int id)
@@ -83,8 +92,7 @@ namespace RepositoryExercise
         }
         public void UpdateAlbum()
         {
-            Console.WriteLine("\r\nPlease type the id of the album you want to update.");
-            var id = Int32.Parse(Console.ReadLine());
+            var id = ValidateStringOnlyDigits("\r\nPlease type the id of the album you want to update.");
             Console.WriteLine("\r\nType one property from these: artist,title,year,genre,sales,owned and recordLabel");
             var property = Console.ReadLine();
             Console.WriteLine("\r\nType the new value for the selected property");

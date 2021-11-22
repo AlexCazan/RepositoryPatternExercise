@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "3olZR6oV7Ai2IjJWgb7c4pstcAvCspTwc3plktreo7Z0bzzzig4SQwt4DUjuftzqVjhWVhxWgoArAupc8rk+Gw==",
+  "dgSpecHash": "tEILgb4hkGkXS6mjgk4CP2E0Ecw9kPLl+8onPv2DKT6/VHfrif0NeJPKHsh6XyUoVBf3Ocf4GRjp/cBkNJiXqA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\alexandru.cazan\\source\\repos\\RepositoryPatternExercise\\RepositoryExercise\\RepositoryExercise.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\alexg\\Documents\\GitHub\\RepositoryPatternExercise\\RepositoryExercise\\RepositoryExercise.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\alexg\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.4\\microsoft.netcore.app.host.win-x64.5.0.4.nupkg.sha512"
+  ],
   "logs": []
 }
